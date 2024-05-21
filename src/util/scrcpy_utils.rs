@@ -304,7 +304,7 @@ impl Display for ScrCpyArgs {
     fn fmt(&self, f: &mut Formatter) -> fmt::Result {
         match self {
             ScrCpyArgs::MaxFps(max_fps) => write!(f, "--max-fps={}", max_fps),
-            ScrCpyArgs::BitRate(bit_rate) => write!(f, "--bit-rate={}", bit_rate),
+            ScrCpyArgs::BitRate(bit_rate) => write!(f, "--video-bit-rate={}", bit_rate),
             ScrCpyArgs::MaxSize(max_size) => write!(f, "--max-size={}", max_size),
             ScrCpyArgs::WindowTitle(window_title) => {
                 write!(f, "--window-title={}", window_title)

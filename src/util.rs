@@ -731,12 +731,12 @@ pub mod adb_utils {
                 format!("Failed to parse scrcpy version: {}", scrcpy_verinfo.version),
             ));
         }
-        if ver_vec[0] != 1 || ver_vec[1] < MIN_SCRCPY_VER {
-            return Err(io::Error::new(
-                io::ErrorKind::Other,
-                format!("Unsupported scrcpy version: {}", scrcpy_verinfo.version),
-            ));
-        }
+        // if ver_vec[0] != 1 || ver_vec[1] < MIN_SCRCPY_VER {
+        //     return Err(io::Error::new(
+        //         io::ErrorKind::Other,
+        //         format!("Unsupported scrcpy version: {}", scrcpy_verinfo.version),
+        //     ));
+        // }
         debug!("Port allocated for scrcpy is: {}", port);
         let port_as_str = port.to_string();
         let scrcpy_args_vec = scrcpy_args
